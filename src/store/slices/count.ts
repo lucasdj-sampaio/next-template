@@ -1,23 +1,15 @@
 'use client';
 import { createSlice } from '@reduxjs/toolkit';
 
-interface counterProps {
-  value: number;
-}
+interface props {}
 
-const initialState: counterProps = {
-  value: 0,
-};
+const initialState: props = {};
 
-export const countSlice = createSlice({
-  name: 'count',
+export const Slice = createSlice({
+  name: 'default',
   initialState: initialState,
-  reducers: {
-    increaseCounter(state) {
-      state.value = state.value + 1;
-    },
-  },
+  reducers: {},
 });
 
-export const { increaseCounter } = countSlice.actions;
-export default countSlice.reducer;
+export const {} = Slice.actions;
+export default Slice.reducer;

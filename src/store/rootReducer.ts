@@ -1,7 +1,7 @@
 'use client';
 import { combineReducers } from 'redux';
-import countSlice from './slices/count';
+import Slice from './slices/count';
 
-const reducers = combineReducers({ countSlice });
+const reducers = combineReducers({ Slice });
 
 export default reducers;
