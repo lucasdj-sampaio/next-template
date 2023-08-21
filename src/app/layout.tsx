@@ -1,3 +1,5 @@
+import '../../public/css/reset.css';
+import '../../public/css/themes.css';
 import { MyProvider } from '@/store/provider';
 import GlobalStyles from '@/styles/GlobalStyles';
 import { Metadata } from 'next';
@@ -9,7 +11,6 @@ export const metadata: Metadata = {
   title: 'Default project',
   description: 'Template for next.js',
   icons: { icon: '/favicon.ico' },
-  archives: ['../../public/css/reset.css', '../../public/css/theme.css'],
 };
 
 export default function RootLayout({
