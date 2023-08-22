@@ -4,7 +4,6 @@ import { MyProvider } from '@/store/provider';
 import GlobalStyles from '@/styles/GlobalStyles';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { SessionProvider } from '../util/sessionProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 

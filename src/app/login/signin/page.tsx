@@ -1,5 +1,19 @@
 'use client';
+import { setLoged } from '@/store/slices/count';
+import { publicAuthRote } from '@/util/authRules';
+import { useDispatch } from 'react-redux';
 
 export default function Signin() {
-  return <h1>LOGIN</h1>;
+  const dispatch = useDispatch();
+  publicAuthRote();
+
+  return (
+    <button
+      onClick={() => {
+        dispatch(setLoged());
+      }}
+    >
+      Login
+    </button>
+  );
 }

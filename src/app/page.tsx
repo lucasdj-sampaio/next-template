@@ -1,10 +1,8 @@
 'use client';
-import { SessionProvider } from '@/util/sessionProvider';
+import { privateAuthRote } from '@/util/authRules';
 
 export default function Home() {
-  return (
-    <SessionProvider>
-      <h1>HOME</h1>
-    </SessionProvider>
-  );
+  privateAuthRote();
+
+  return <h1>HOME</h1>;
 }
