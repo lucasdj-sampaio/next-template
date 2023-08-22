@@ -1,5 +1,5 @@
 'use client';
 
 export default function Signin() {
-  return <></>;
+  return <h1>LOGIN</h1>;
 }
