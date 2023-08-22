@@ -4,6 +4,7 @@ import { MyProvider } from '@/store/provider';
 import GlobalStyles from '@/styles/GlobalStyles';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { SessionProvider } from './sessionProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,8 +23,10 @@ export default function RootLayout({
     <html lang="en" data-theme="apptheme">
       <body className={inter.className}>
         <MyProvider>
-          <GlobalStyles />
-          {children}
+          <SessionProvider>
+            <GlobalStyles />
+            {children}
+          </SessionProvider>
         </MyProvider>
       </body>
     </html>
