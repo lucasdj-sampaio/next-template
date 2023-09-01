@@ -4,13 +4,14 @@ import { MyProvider } from '@/store/provider';
 import GlobalStyles from '@/styles/GlobalStyles';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import StyledComponentsRegistry from './registry';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Default project',
   description: 'Template for next.js',
-  icons: { icon: '/favicon.ico' },
+  icons: { icon: './favicon.ico' },
 };
 
 export default function RootLayout({
@@ -21,10 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="apptheme">
       <body className={inter.className}>
-        <MyProvider>
-          <GlobalStyles />
-          {children}
-        </MyProvider>
+        <StyledComponentsRegistry>
+          <MyProvider>
+            <GlobalStyles />
+            {children}
+          </MyProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
